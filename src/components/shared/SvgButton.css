@@ -1,0 +1,135 @@
+.svg-button {
+  background: none;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 47px;
+  position: relative;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: transform 300ms, color 300ms;
+  cursor: pointer;
+  backface-visibility: hidden;
+}
+
+.svg-button.theme-dark {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.svg-button.theme-dark:hover {
+  color: #4caf50;
+}
+
+.svg-button.theme-light {
+  color: #212121;
+}
+
+.svg-button.theme-light:hover {
+  color: #2e7d32;
+}
+
+.svg-button:hover,
+.svg-button:focus {
+  transform: scale(1.05);
+}
+
+.svg-button:hover .svg-button__line {
+  animation-play-state: paused;
+}
+
+.svg-button__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.svg-button__line {
+  fill: none;
+  stroke-width: 2;
+}
+
+/* Animations based on Perimeter = 492
+   $length: 492
+   $length-half: 246
+   $length-third: 164
+   $length-two-thirds: 328
+*/
+
+@keyframes outer-dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 246 246;
+  }
+
+  50% {
+    stroke-dasharray: 164 328;
+  }
+
+  100% {
+    stroke-dashoffset: 492;
+    stroke-dasharray: 246 246;
+  }
+}
+
+.svg-button__line.outer {
+  stroke-dasharray: 246 246;
+  stroke-dashoffset: 0;
+  animation: outer-dashoffset infinite linear 6s;
+}
+
+.svg-button.theme-dark .svg-button__line.outer {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.svg-button.theme-light .svg-button__line.outer {
+  stroke: rgba(46, 125, 50, 0.25);
+}
+
+@keyframes inner-dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 246 246;
+  }
+
+  50% {
+    stroke-dasharray: 164 328;
+  }
+
+  100% {
+    stroke-dashoffset: -492;
+    stroke-dasharray: 246 246;
+  }
+}
+
+.svg-button__line.inner {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 246 246;
+  animation: inner-dashoffset infinite linear 5s;
+  stroke: #4caf50;
+  filter: drop-shadow(0 0 3px rgba(76, 175, 80, 0.5));
+}
+
+.svg-button__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.svg-button:hover .svg-button__content {
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}

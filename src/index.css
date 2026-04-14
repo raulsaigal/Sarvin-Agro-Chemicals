@@ -1,0 +1,344 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply font-sans text-text-muted dark:text-gray-300 bg-white dark:bg-dark-bg m-0 p-0 overflow-x-hidden transition-colors duration-300;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-text-dark dark:text-white transition-colors duration-300;
+  }
+}
+
+@layer components {
+
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-cta-green text-white border-none rounded-full px-7 py-3 text-sm font-semibold tracking-wide uppercase cursor-pointer transition-all duration-300;
+  }
+
+  .btn-primary:hover {
+    @apply bg-cta-green-hover shadow-btn;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-primary-green border-2 border-primary-green rounded-full px-6 py-2.5 text-sm font-semibold uppercase transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    @apply bg-primary-green text-white;
+  }
+
+  /* Shared Card Style */
+  .service-card {
+    @apply bg-card-bg rounded-card shadow-card p-7 flex gap-4 items-start transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Form Elements */
+  .contact-input {
+    @apply w-full border-[1.5px] border-[#e0e0e0] dark:border-white/20 dark:bg-black/30 dark:text-white rounded-lg px-4 py-3 font-sans transition-colors duration-300 focus:border-primary-green focus:outline-none placeholder:text-gray-400 dark:placeholder:text-gray-500;
+  }
+
+  /* Navbar Scroll State */
+  .navbar {
+    @apply fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent;
+  }
+
+  .navbar.scrolled {
+    @apply bg-dark-bg/95 backdrop-blur-md shadow-md py-4;
+  }
+}
+
+/* Star Button CSS */
+.star-btn {
+  position: relative;
+  /* border: rounded-full; */
+  padding: 12px 35px;
+  background: #19321b;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fec195;
+  border: 2px solid #f5be50;
+  border-radius: 999px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.star-btn .star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-btn .star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-btn .star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-btn .star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-btn .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-btn .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+.star-btn:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+.star-btn:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn .fil0 {
+  fill: #fffdef;
+}
+
+/* Sidebar Social Links Stream */
+.social-right {
+  position: fixed;
+  top: 35%;
+  right: 0;
+  z-index: 1000;
+}
+
+.social-right ul {
+  padding: 0;
+  transform: translate(250px, 0);
+}
+
+.social-right ul li {
+  display: block;
+  margin: 5px 0;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: left;
+  padding: 10px;
+  border-radius: 30px 0 0 30px;
+  transition: transform 0.5s ease-in-out, background 0.3s;
+}
+
+.social-right ul li:hover {
+  transform: translate(-150px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.social-right ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: font-sans;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.social-right ul li.facebook:hover {
+  background: rgba(59, 89, 152, 0.8);
+}
+
+.social-right ul li.twitter:hover {
+  background: rgba(0, 172, 237, 0.8);
+}
+
+.social-right ul li.instagram:hover {
+  background: rgba(228, 64, 95, 0.8);
+}
+
+.social-right ul li.linkedin:hover {
+  background: rgba(0, 123, 182, 0.8);
+}
+
+.social-right ul li:hover a {
+  color: #fff;
+}
+
+.social-right ul li:hover .icon-wrap {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  transform: rotate(360deg);
+  transition: all 0.5s;
+}
+
+.social-right ul li .icon-wrap {
+  margin-right: 15px;
+  margin-left: 3px;
+  color: #000;
+  background: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Component */
+.hamburger {
+  width: 32px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) { top: 0px; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+
+.hamburger.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+/* Mobile Nav Link Animation */
+.mobile-nav-link {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.opacity-100 .mobile-nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
