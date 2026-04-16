@@ -33,8 +33,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`navbar px-6 md:px-12 py-5 transition-all duration-300 ${isScrolled ? 'scrolled text-white' : 'bg-transparent text-white'}`}>
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <>
+      <nav className={`navbar px-6 md:px-12 py-5 transition-all duration-300 ${isScrolled ? 'scrolled text-white' : 'bg-transparent text-white'}`}>
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center no-underline z-50 h-10 relative group w-[50vw] sm:w-auto">
           <img
@@ -82,12 +83,13 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-white z-50"
+          className="lg:hidden text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] bg-black/10 rounded-md p-1.5 z-50"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-      </div>
+        </div>
+      </nav>
 
       {/* Mobile Menu Overlay Tracker (applies dark overlay and closes drawer on click outside) */}
       <div
@@ -149,6 +151,6 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-    </nav>
+    </>
   );
 }
