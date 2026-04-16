@@ -37,7 +37,7 @@ function ContactInfoGrid() {
       title: "Phone",
       lines: [
         { label: "Toll-Free", text: "1800-891-0612" },
-        { label: "Customer Care", text: "92418 78016" }
+        { label: "Customer Care", text: "92638 92020" }
       ]
     },
     {
@@ -91,18 +91,18 @@ function ContactInfoGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white dark:bg-dark-section dark:border-white/10 dark:shadow-none rounded-card shadow-card p-8 flex items-start gap-6 border border-dark-bg/5 hover:border-primary-green/50 transition-colors"
+              className="group bg-white dark:bg-dark-section dark:border-white/10 dark:shadow-none rounded-card shadow-card p-8 flex items-start gap-6 border border-dark-bg/10 hover:bg-green-700 hover:border-black hover:shadow-lg transition-all duration-300 cursor-default"
             >
-              <div className="bg-light-green dark:bg-black/50 p-4 rounded-full shrink-0">
-                {card.icon}
+              <div className="bg-light-green dark:bg-black/50 group-hover:bg-white/20 p-4 rounded-full shrink-0 transition-colors duration-300">
+                <span className="group-hover:[&>svg]:text-white [&>svg]:transition-colors [&>svg]:duration-300">{card.icon}</span>
               </div>
               <div className="flex-1">
-                <h4 className="font-serif font-bold text-xl text-text-dark dark:text-white mb-4">{card.title}</h4>
+                <h4 className="font-serif font-bold text-xl text-text-dark dark:text-white group-hover:text-white mb-4 transition-colors duration-300">{card.title}</h4>
                 <div className="space-y-4">
                   {card.lines.map((ln, i) => (
                     <div key={i} className="text-sm">
-                      <span className="font-bold text-text-dark dark:text-gray-300 block mb-1">{ln.label}:</span>
-                      <span className="text-text-muted dark:text-gray-400 whitespace-pre-line leading-relaxed">{ln.text}</span>
+                      <span className="font-bold text-text-dark dark:text-gray-300 group-hover:text-white block mb-1 transition-colors duration-300">{ln.label}:</span>
+                      <span className="text-text-muted dark:text-gray-400 group-hover:text-white/85 whitespace-pre-line leading-relaxed transition-colors duration-300">{ln.text}</span>
                     </div>
                   ))}
                 </div>
@@ -112,7 +112,7 @@ function ContactInfoGrid() {
         </div>
 
         {/* Right: Contact Form */}
-        <div className="relative mt-30 md:mt-50 lg:mt-35">
+        <div className="relative mt-45 md:mt-50 lg:mt-50">
           {/* Floating Image above the form */}
           <motion.img
             src="/contact us.png"
@@ -121,7 +121,7 @@ function ContactInfoGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="absolute -top-14 sm:-top-100 left-1/2 -translate-x-1/2 w-69 sm:w-120 z-30 drop-shadow-2xl pointer-events-none"
+            className="absolute -top-16 sm:-top-101 left-1/2 -translate-x-1/2 w-69 sm:w-120 z-30 drop-shadow-2xl pointer-events-none"
           />
 
           <motion.div

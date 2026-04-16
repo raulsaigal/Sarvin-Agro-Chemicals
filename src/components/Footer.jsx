@@ -17,10 +17,10 @@ export default function Footer() {
             Leading Agrochemical Solutions for India's Farmers. 25+ Years of global farming excellence and robust plant protection.
           </p>
           <div className="flex gap-4 mt-6">
-            <a href="https://www.facebook.com/sarvinagrochemicalspvtltd" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-primary-green transition-colors"><FaFacebookF /></a>
-            <a href="https://x.com/Paidavaar_" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-primary-green transition-colors"><FaTwitter /></a>
-            <a href="https://www.linkedin.com/in/paidavaar-sarvin-agro-chemicals-pvt-ltd-21a05b329/" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-primary-green transition-colors"><FaLinkedinIn /></a>
-            <a href="https://www.instagram.com/sarvin_agro_chemicals/" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-primary-green transition-colors"><FaInstagram /></a>
+            <a href="https://www.facebook.com/sarvinagrochemicalspvtltd" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-[#3b5998cc] transition-colors"><FaFacebookF /></a>
+            <a href="https://x.com/Paidavaar_" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-[#00acedcc] transition-colors"><FaTwitter /></a>
+            <a href="https://www.instagram.com/sarvin_agro_chemicals/" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-[#e4405fcc] transition-colors"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/paidavaar-sarvin-agro-chemicals-pvt-ltd-21a05b329/" className="w-10 h-10 rounded-full bg-dark-section flex items-center justify-center hover:bg-[#007bb6cc] transition-colors"><FaLinkedinIn /></a>
           </div>
         </div>
 

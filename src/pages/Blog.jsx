@@ -344,10 +344,15 @@ export default function Blog() {
             viewport={{ once: true }}
             className="flex justify-center"
           >
-            <button className="bg-primary-green hover:bg-cta-green-hover text-white font-bold py-4 px-8 rounded-full flex items-center gap-3 shadow-btn hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-              <Download size={20} />
-              Download Seasonal Guide PDF
-            </button>
+            <a
+              href="/Paidavaar_Modern_Farming_Handbook_2026.pdf"
+              download="Paidavaar_Modern_Farming_Handbook_2026.pdf"
+              className="btn-slide-download"
+            >
+              <span className="circle-dl"><Download size={18} /></span>
+              <span className="title-dl">Seasonal Guide PDF</span>
+              <span className="title-hover-dl">Download Now</span>
+            </a>
           </motion.div>
         </section>
 
