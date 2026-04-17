@@ -112,7 +112,7 @@ function ContactInfoGrid() {
         </div>
 
         {/* Right: Contact Form */}
-        <div className="relative mt-0 lg:mt-12">
+        <div className="relative mt-0 lg:mt-50">
           {/* Floating Image above the form — hidden on mobile to avoid overlaps */}
           <motion.img
             src="/contact us.png"
@@ -121,7 +121,7 @@ function ContactInfoGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="hidden sm:block absolute -top-[90px] left-1/2 -translate-x-1/2 w-[140px] z-30 drop-shadow-2xl pointer-events-none"
+            className="hidden sm:block absolute -top-[370px] left-1/2 -translate-x-1/2 w-[440px] z-30 drop-shadow-2xl pointer-events-none"
           />
 
           <motion.div

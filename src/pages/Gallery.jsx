@@ -179,20 +179,29 @@ export default function Gallery() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative max-w-5xl w-full flex items-center justify-center cursor-move"
+              className={`relative max-w-5xl w-full flex items-center justify-center ${zoomLevel > 1 ? 'cursor-move' : 'cursor-zoom-in'}`}
               onClick={(e) => e.stopPropagation()}
             >
               <motion.img
                 src={selectedImg.src}
                 alt={selectedImg.title}
-                drag
-                dragConstraints={{ left: -1000, right: 1000, top: -500, bottom: 500 }}
-                dragElastic={0.2}
-                animate={{ scale: zoomLevel }}
-                transition={{ type: "spring", damping: 20, stiffness: 200 }}
+                drag={zoomLevel > 1}
+                dragConstraints={false}
+                dragElastic={0.1}
+                animate={{ 
+                  scale: zoomLevel,
+                  x: zoomLevel === 1 ? 0 : undefined,
+                  y: zoomLevel === 1 ? 0 : undefined
+                }}
+                transition={{ type: "tween", duration: 0.35, ease: "easeInOut" }}
                 className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl origin-center"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  // Toggle zoom between 1 and 2 upon clicking the image
+                  setZoomLevel(prev => prev === 1 ? 2 : 1);
+                }}
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg pointer-events-none">
+              <div className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg pointer-events-none transition-opacity duration-300 ${zoomLevel > 1 ? 'opacity-0' : 'opacity-100'}`}>
                 <span className="text-primary-green font-bold text-sm track-wider uppercase">{selectedImg.category}</span>
                 <h3 className="text-white font-serif text-2xl md:text-3xl mt-1">{selectedImg.title}</h3>
               </div>

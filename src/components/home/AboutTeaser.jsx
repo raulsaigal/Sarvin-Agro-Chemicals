@@ -41,7 +41,7 @@ export default function AboutTeaser() {
           <img
             src="/Indian Farmer Agriculture Life.jpg"
             alt="Farming"
-            className="md:hidden w-full h-full object-cover rounded-xl shadow-lg"
+            className="md:hidden w-full h-full object-cover object-[center_15%] sm:object-top rounded-xl shadow-lg"
           />
           {/* Desktop: floating collage */}
           <motion.img
@@ -61,7 +61,7 @@ export default function AboutTeaser() {
             whileHover={{ scale: 1.05, zIndex: 30 }}
           />
           {/* Badge Overlay */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-green text-white w-24 h-24 md:w-30 md:h-30 rounded-full flex flex-col items-center justify-center p-3 md:p-4 shadow-xl border-2 border-white dark:border-dark-bg rotate-12 hover:rotate-0 transition-transform duration-500 z-40">
+          <div className="absolute bottom-4 right-4 md:top-1/2 md:left-1/2 translate-x-0 translate-y-0 md:-translate-x-1/2 md:-translate-y-1/2 bg-primary-green text-white w-24 h-24 md:w-30 md:h-30 rounded-full flex flex-col items-center justify-center p-3 md:p-4 shadow-xl border-2 border-white dark:border-dark-bg rotate-12 hover:rotate-0 transition-transform duration-500 z-40">
             <span className="text-2xl md:text-3xl font-serif font-bold">5+</span>
             <span className="text-[10px] md:text-xs text-center font-semibold uppercase">Years Exp.</span>
           </div>
