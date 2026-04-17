@@ -10,10 +10,10 @@ export default function Footer() {
         {/* Column 1: Brand */}
         <div className="-mt-8 md:-mt-16 lg:-mt-20">
           <Link to="/" className="flex items-center gap-3 no-underline md:mb-6">
-            <img src="/Sarvin Agro Logo.png" alt="Sarvin Agrochemical Logo" className="h-70 md:h-62 object-contain -ml-15 -mt-6" />
-            <span className="font-serif text-sm md:text-sm font-bold tracking-wide whitespace-nowrap -mt-9 -ml-20 uppercase">Sarvin Agro Chemicals</span>
+            <img src="/Sarvin Agro Logo.png" alt="Sarvin Agrochemical Logo" className="h-52 sm:h-70 md:h-62 object-contain -ml-10 sm:-ml-15 -mt-6" />
+            <span className="font-serif text-[11px] sm:text-sm md:text-sm font-bold tracking-wide whitespace-nowrap -mt-9 -ml-12 sm:-ml-20 uppercase">Sarvin Agro Chemicals</span>
           </Link>
-          <p className="text-text-muted -mt-20 text-sm leading-relaxed">
+          <p className="text-text-muted -mt-16 sm:-mt-20 text-sm leading-relaxed">
             Leading Agrochemical Solutions for India's Farmers. 25+ Years of global farming excellence and robust plant protection.
           </p>
           <div className="flex gap-4 mt-6">

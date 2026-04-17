@@ -95,7 +95,7 @@ export default function Testimonials() {
       </div>
 
       {/* 3D Coverflow Cards */}
-      <div className="w-full relative z-10 flex justify-center items-center h-[400px] overflow-hidden" style={{ perspective: 1200 }}>
+      <div className="w-full relative z-10 flex justify-center items-center h-[350px] md:h-[400px] overflow-hidden" style={{ perspective: 1200 }}>
         {testimonials.map((t, idx) => {
           let position = 'hidden';
           if (idx === activeIndex) position = 'center';
@@ -151,7 +151,7 @@ export default function Testimonials() {
                 if (position === 'right') nextSlide();
               }}
               style={{ transformStyle: 'preserve-3d' }}
-              className={`absolute w-[calc(100%-3rem)] max-w-[340px] md:max-w-[420px] testimonial-card bg-white dark:bg-dark-section dark:shadow-none dark:border-y dark:border-r dark:border-white/5 rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] border-l-4 border-l-primary-green flex flex-col justify-between h-[400px] select-none ${position === 'center' ? 'cursor-default shadow-2xl' : 'cursor-pointer hover:opacity-100 transition-opacity duration-300'}`}
+              className={`absolute w-[calc(100%-3rem)] max-w-[340px] md:max-w-[420px] testimonial-card bg-white dark:bg-dark-section dark:shadow-none dark:border-y dark:border-r dark:border-white/5 rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] border-l-4 border-l-primary-green flex flex-col justify-between h-[350px] md:h-[400px] select-none ${position === 'center' ? 'cursor-default shadow-2xl' : 'cursor-pointer hover:opacity-100 transition-opacity duration-300'}`}
             >
               <div className="absolute top-0 right-0 bg-light-green dark:bg-black/40 rounded-bl-3xl w-16 h-16 flex items-start justify-end p-3 opacity-50">
                 <Quote className="text-primary-green w-6 h-6" />

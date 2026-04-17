@@ -81,7 +81,7 @@ export default function Hero() {
         </ul>
       </div>
 
-      <section className="relative min-h-[110vh] bg-dark-bg text-white overflow-hidden pt-23 mb-24 md:mb-25 pb-10">
+      <section className="relative min-h-[110vh] bg-dark-bg text-white overflow-hidden pt-20 md:pt-23 pb-36 md:pb-10 mb-16 md:mb-25">
 
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
@@ -108,7 +108,7 @@ export default function Hero() {
               variants={typeContainer}
               initial="hidden"
               animate="visible"
-              className="text-6xl md:text-6xl font-serif font-bold leading-[1.1] mb-6 drop-shadow-2xl text-white min-h-[140px] whitespace-pre-wrap"
+              className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-[1.1] mb-6 drop-shadow-2xl text-white min-h-[120px] md:min-h-[140px] whitespace-pre-wrap"
             >
               {Array.from("Leading Agro Chemical Solutions for India's ").map((char, i) => (
                 <motion.span variants={typeLetter} key={`c1-${i}`}>

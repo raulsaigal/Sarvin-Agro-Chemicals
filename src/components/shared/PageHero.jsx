@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 
 export default function PageHero({ title, bgImage, currentPath, titleClassName = "", overlay = true }) {
   return (
-    <section className="relative h-[400px] flex items-center justify-center pt-20">
+    <section className="relative h-[280px] md:h-[400px] flex items-center justify-center pt-20">
       <div className="absolute inset-0 z-0">
         <img 
           src={bgImage} 

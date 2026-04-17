@@ -112,8 +112,8 @@ function ContactInfoGrid() {
         </div>
 
         {/* Right: Contact Form */}
-        <div className="relative mt-45 md:mt-50 lg:mt-50">
-          {/* Floating Image above the form */}
+        <div className="relative mt-0 lg:mt-12">
+          {/* Floating Image above the form — hidden on mobile to avoid overlaps */}
           <motion.img
             src="/contact us.png"
             alt="Contact Support"
@@ -121,7 +121,7 @@ function ContactInfoGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="absolute -top-16 sm:-top-101 left-1/2 -translate-x-1/2 w-69 sm:w-120 z-30 drop-shadow-2xl pointer-events-none"
+            className="hidden sm:block absolute -top-[90px] left-1/2 -translate-x-1/2 w-[140px] z-30 drop-shadow-2xl pointer-events-none"
           />
 
           <motion.div
@@ -129,9 +129,9 @@ function ContactInfoGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white dark:bg-dark-section dark:border-white/10 dark:shadow-none rounded-card shadow-2xl p-8 md:p-12 pt-16 sm:pt-24 border border-dark-bg/5 relative z-20"
+            className="bg-white dark:bg-dark-section dark:border-white/10 dark:shadow-none rounded-card shadow-2xl p-6 md:p-12 sm:pt-24 border border-dark-bg/5 relative z-20"
           >
-            <h3 className="font-serif font-bold text-2xl text-text-dark dark:text-white mb-2 text-center md:text-left mt-10 sm:mt-6 md:mt-2 lg:mt-0">Send a Message</h3>
+            <h3 className="font-serif font-bold text-2xl text-text-dark dark:text-white mb-2 text-center md:text-left">Send a Message</h3>
             <p className="text-text-muted dark:text-gray-400 text-sm mb-8 text-center md:text-left">Got a question? Fill the form below and we'll reply shortly.</p>
 
             <form className="space-y-6" onSubmit={handleSubmit}>

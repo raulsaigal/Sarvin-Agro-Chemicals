@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
+          className="relative h-[280px] sm:h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl"
         >
           <img
             src="Agronomist.png"
