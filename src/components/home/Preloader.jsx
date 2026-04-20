@@ -65,13 +65,13 @@ export default function Preloader({ onComplete }) {
                     >
                         {/* Animated Text */}
                         <motion.div
-                            className="flex space-x-1 sm:space-x-2 font-serif text-2xl sm:text-4xl md:text-5xl text-green-500 tracking-widest mb-6"
+                            className="flex flex-wrap justify-center font-serif text-xl sm:text-4xl md:text-5xl text-green-500 tracking-[0.2em] sm:tracking-widest mb-6 px-4 text-center"
                             variants={containerVariants}
                             initial="hidden"
                             animate="visible"
                         >
                             {letters.map((letter, index) => (
-                                <motion.span key={index} variants={childVariants}>
+                                <motion.span key={index} variants={childVariants} className="inline-block">
                                     {letter === " " ? "\u00A0" : letter}
                                 </motion.span>
                             ))}
@@ -79,7 +79,7 @@ export default function Preloader({ onComplete }) {
 
                         {/* Progress Line */}
                         <motion.div
-                            className="h-[2px] bg-green-500 w-200 sm:w-200"
+                            className="h-[2px] bg-green-500 w-80 sm:w-150"
                             initial={{ scaleX: 0, originX: 0 }}
                             animate={{ scaleX: 1 }}
                             transition={{ duration: 2.0, ease: "easeInOut", delay: 0.6 }}

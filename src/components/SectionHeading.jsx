@@ -4,16 +4,16 @@ export default function SectionHeading({ eyebrow, title, highlightWord, classNam
   // Logic to color specific word in title
   const renderTitle = () => {
     if (!highlightWord) return title;
-    
+
     const parts = title.split(new RegExp(`(${highlightWord})`, 'gi'));
-    return parts.map((part, i) => 
-      part.toLowerCase() === highlightWord.toLowerCase() ? 
+    return parts.map((part, i) =>
+      part.toLowerCase() === highlightWord.toLowerCase() ?
         <span key={i} className="text-primary-green">{part}</span> : part
     );
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}

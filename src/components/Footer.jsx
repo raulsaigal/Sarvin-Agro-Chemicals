@@ -74,13 +74,13 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex gap-3 items-start">
               <MapPin className="text-primary-green min-w-5 h-5 mt-1" />
-              <p className="text-sm text-text-muted leading-relaxed">Sinha House, Road No. 05, Rajendra Nagar, Patna – 800016</p>
+              <p className="text-sm text-text-muted leading-relaxed">Rani talab park, Rd Number 8C, Rajendra Nagar, Patna, Bihar - 800016</p>
             </li>
             <li className="flex gap-3 items-center">
               <Phone className="text-primary-green min-w-5 h-5" />
               <div className="flex flex-col text-sm text-text-muted">
                 <span>1800-891-0612</span>
-                <span>92418 78016</span>
+                <span>92638 92020</span>
               </div>
             </li>
             <li className="flex gap-3 items-center">

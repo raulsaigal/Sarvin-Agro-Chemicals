@@ -36,58 +36,58 @@ export default function Navbar() {
     <>
       <nav className={`navbar px-6 md:px-12 py-5 transition-all duration-300 ${isScrolled ? 'scrolled text-white' : 'bg-transparent text-white'}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="flex items-center no-underline z-50 h-10 relative group w-[50vw] sm:w-auto">
-          <img
-            src="/Sarvin Agro Logo.png"
-            alt="Sarvin Agrochemical Logo"
-            className="absolute top-1/2 -left-2 sm:-left-4 md:-left-6 -translate-y-[48%] -ml-6 sm:-ml-8 md:-ml-12 h-[140px] sm:h-[180px] md:h-[200px] max-w-none object-contain pointer-events-none drop-shadow-lg"
-          />
-          <span className="font-serif text-sm sm:text-sm md:text-md font-bold tracking-widest whitespace-normal sm:whitespace-nowrap uppercase text-white sm:-mt-[10px] ml-[55px] sm:ml-[65px] md:ml-[37px] relative z-10 drop-shadow-md leading-tight">
-            Sarvin Agro Chemicals
-          </span>
-        </Link>
-
-        {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            link.external ? (
-              <a
-                key={link.name}
-                href={link.path}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-semibold tracking-wide uppercase hover:text-accent-green transition-colors font-sans"
-              >
-                {link.name}
-              </a>
-            ) : (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`text-sm font-semibold tracking-wide uppercase hover:text-accent-green transition-colors font-sans ${location.pathname === link.path ? 'text-accent-green' : ''}`}
-              >
-                {link.name}
-              </Link>
-            )
-          ))}
-        </div>
-
-        {/* Desktop CTA & Toggle */}
-        <div className="hidden lg:flex items-center gap-6">
-          <DarkModeToggle />
-          <Link to="/contact">
-            <BlobButton>Get A Quote</BlobButton>
+          {/* Logo */}
+          <Link to="/" className="flex items-center no-underline z-50 h-10 relative group w-[50vw] sm:w-auto">
+            <img
+              src="/Sarvin Agro Logo.png"
+              alt="Sarvin Agrochemical Logo"
+              className="absolute top-1/2 -left-2 sm:-left-4 md:-left-6 -translate-y-[48%] -ml-6 sm:-ml-8 md:-ml-12 h-[140px] sm:h-[180px] md:h-[200px] max-w-none object-contain pointer-events-none drop-shadow-lg"
+            />
+            <span className="font-serif text-sm sm:text-sm md:text-md font-bold tracking-widest whitespace-normal sm:whitespace-nowrap uppercase text-white sm:-mt-[10px] ml-[55px] sm:ml-[65px] md:ml-[37px] relative z-10 drop-shadow-md leading-tight">
+              Sarvin Agro Chemicals
+            </span>
           </Link>
-        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="lg:hidden text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] bg-black/10 rounded-md p-1.5 z-50"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+          {/* Desktop Links */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              link.external ? (
+                <a
+                  key={link.name}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold tracking-wide uppercase hover:text-accent-green transition-colors font-sans"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`text-sm font-semibold tracking-wide uppercase hover:text-accent-green transition-colors font-sans ${location.pathname === link.path ? 'text-accent-green' : ''}`}
+                >
+                  {link.name}
+                </Link>
+              )
+            ))}
+          </div>
+
+          {/* Desktop CTA & Toggle */}
+          <div className="hidden lg:flex items-center gap-6">
+            <DarkModeToggle />
+            <Link to="/contact">
+              <BlobButton>Get A Quote</BlobButton>
+            </Link>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="lg:hidden text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] bg-black/10 rounded-md p-1.5 z-50"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </nav>
 
