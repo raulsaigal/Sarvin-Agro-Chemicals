@@ -2,7 +2,7 @@
 @config "../tailwind.config.js";
 
 @layer base {
-  body {
+  html, body {
     @apply font-sans text-text-muted dark:text-gray-300 bg-white dark:bg-dark-bg m-0 p-0 overflow-x-hidden transition-colors duration-300;
     scroll-behavior: smooth;
   }

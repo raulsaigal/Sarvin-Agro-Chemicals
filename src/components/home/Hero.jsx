@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <>
       {/* Social Stream Widget (Placed outside overflow-hidden to allow fixed slide-in animation) */}
-      <div className="social-right hidden lg:block">
+      <div className="social-right hidden lg:block ">
         <ul>
           <li className="facebook">
             <a href="https://www.facebook.com/sarvinagrochemicalspvtltd" target="_blank" rel="noopener noreferrer">
@@ -81,7 +81,7 @@ export default function Hero() {
         </ul>
       </div>
 
-      <section className="relative min-h-[110vh] bg-dark-bg text-white overflow-hidden pt-20 md:pt-23 pb-36 md:pb-10 mb-16 md:mb-25">
+      <section className="relative min-h-[110vh] bg-dark-bg text-white overflow-hidden pt-24 md:pt-28 flex flex-col mb-16 md:mb-25">
 
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
@@ -93,7 +93,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-8 h-full flex flex-col justify-center pb-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 flex-1 flex flex-col justify-center w-full pb-16">
           <div className="max-w-2xl">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -184,7 +184,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-0 left-0 right-0 bg-dark-section z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.2)]"
+          className="relative mt-auto w-full bg-dark-section z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.2)]"
         >
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-dark-bg/20">
             {stats.map((stat, idx) => (

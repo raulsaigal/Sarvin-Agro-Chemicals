@@ -16,19 +16,19 @@ const galleryData = [
   { id: 49, title: '2nd Foundation Day', category: 'Company Foundation Day', src: '/Gallery/foundation day (7).jpg' },
   { id: 50, title: '2nd Foundation Day', category: 'Company Foundation Day', src: '/Gallery/foundation day (8).jpg' },
 
+  { id: 63, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (13).jpg' },
+  { id: 56, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (6).jpg' },
+  { id: 57, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (7).jpg' },
+  { id: 60, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (10).jpg' },
+  { id: 61, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (11).jpg' },
+  { id: 62, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (12).jpg' },
   { id: 51, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (1).jpg' },
   { id: 52, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (2).jpg' },
   { id: 53, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (3).jpg' },
   { id: 54, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (4).jpg' },
   { id: 55, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (5).jpg' },
-  { id: 56, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (6).jpg' },
-  { id: 57, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (7).jpg' },
   { id: 58, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (8).jpg' },
   { id: 59, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (9).jpg' },
-  { id: 60, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (10).jpg' },
-  { id: 61, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (11).jpg' },
-  { id: 62, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (12).jpg' },
-  { id: 63, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (13).jpg' },
   { id: 64, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (14).jpg' },
   { id: 65, title: 'Future Farming Conference 2026', category: 'Future Farming Conference 2026', src: '/Gallery/Future farming (16).jpg' },
 
@@ -90,7 +90,7 @@ export default function Gallery() {
   return (
     <>
       <SEO title="Our Gallery" description="Explore the vibrant life at Sarvin Agrochemical through our events, meetings, and celebrations." />
-      <PageHero title="Life At Sarvin" bgImage="https://picsum.photos/seed/gallerybg/1920/600" currentPath="Gallery" />
+      <PageHero title="Life At Sarvin" bgImage="https://picsum.photos/seed/gallerybg/1920/600" currentPath="Gallery" titleClassName="text-green-500 dark:text-white" />
 
       <section className="py-24 bg-white dark:bg-dark-bg transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">

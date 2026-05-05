@@ -41,6 +41,9 @@ export default function Footer() {
         <div>
           <h4 className="font-serif text-xl font-bold mb-6 relative pb-3 border-b border-dark-section inline-block text-white">Recent Posts</h4>
           <div className="space-y-4">
+            <ul>
+              <Link to="/blog" className="text-text-muted hover:text-accent-green transition-colors text-lg"><li>Blogs</li></Link>
+            </ul>
             <Link
               to="/blog"
               state={{ postId: 1 }}

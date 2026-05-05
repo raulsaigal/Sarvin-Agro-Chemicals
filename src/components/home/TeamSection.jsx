@@ -1,25 +1,24 @@
 import { motion } from 'framer-motion';
 import SectionHeading from '../SectionHeading';
 import { Mail, Phone, ExternalLink } from 'lucide-react';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 export default function TeamSection() {
+  const navigate = useNavigate();
   const team = [
     {
       name: "Anamika Anand",
       role: "CEO | Founder",
-      img: "https://placehold.co/400x400/212121/4caf50?text=Anamika+Anand",
+      img: "anamika.png",
+      linkedinUrl: "https://www.linkedin.com/in/anamika-anand-866052215/",
     },
-    {
-      name: "Amit Kumar",
-      role: "Sales Manager",
-      img: "https://placehold.co/400x400/2e7d32/e8f5e9?text=Amit+Kumar",
-    },
-    {
-      name: "Ankit Kumar",
-      role: "Field Expert",
-      img: "https://placehold.co/400x400/4caf50/f9f9f9?text=Ankit+Kumar",
-    }
   ];
+
+  const descriptionCard = {
+    title: "About the Founder",
+    description: "Anamika Anand is a visionary leader with over a decade of experience in the agro-chemical industry. She is passionate about sustainable agriculture and empowering farmers with innovative solutions. Her leadership has driven Sarvin Agro to new heights, focusing on quality, integrity, and customer satisfaction."
+  };
 
   const containerState = {
     hidden: { opacity: 0 },
@@ -39,8 +38,9 @@ export default function TeamSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <SectionHeading
-            eyebrow="MEET OUR TEAM"
-            title="Our Creative Team"
+            eyebrow="Meet the Founder"
+            title="The Mind Behind PAIDAVAAR"
+            highlightWord="PAIDAVAAR"
             className="!mb-4"
           />
           <p className="text-text-muted dark:text-gray-400 max-w-2xl mx-auto">
@@ -53,11 +53,11 @@ export default function TeamSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {team.map((member, idx) => (
-            <motion.div key={idx} variants={itemState} className="team-card bg-white dark:bg-dark-section dark:border dark:border-white/10 rounded-xl overflow-hidden shadow-card dark:shadow-none text-center pb-6 group transition-transform duration-300 hover:-translate-y-2">
-              <div className="relative overflow-hidden h-[250px]">
+            <motion.div key={idx} variants={itemState} className="team-card bg-white dark:bg-dark-section dark:border dark:border-white/10 rounded-xl overflow-hidden shadow-card dark:shadow-none text-center pb-6 group transition-transform duration-300 hover:-translate-y-2 h-full flex flex-col">
+              <div className="relative overflow-hidden h-[300px] md:h-[400px]">
                 <img
                   src={member.img}
                   alt={member.name}
@@ -65,20 +65,42 @@ export default function TeamSection() {
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark-bg/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6 gap-4">
                   <a href="#" className="text-white hover:text-accent-green"><Phone size={18} /></a>
-                  <a href="#" className="text-white hover:text-accent-green"><Mail size={18} /></a>
+                  <a href="mailto:[EMAIL_ADDRESS]" className="text-white hover:text-accent-green"><Mail size={18} /></a>
+                  <a href={member.linkedinUrl || "#"} target={member.linkedinUrl ? "_blank" : "_self"} rel={member.linkedinUrl ? "noopener noreferrer" : ""} className="text-white hover:text-accent-green flex items-center gap-1.5">
+                    <FaLinkedinIn size={18} />
+                    {member.linkedinId && <span className="text-sm font-medium">{member.linkedinId}</span>}
+                  </a>
                 </div>
               </div>
-              <div className="pt-1 px-4">
-                <h4 className="text-xl font-serif font-bold text-text-dark dark:text-white mb-1 group-hover:text-primary-green transition-colors">{member.name}</h4>
-                <span className="text-sm font-semibold uppercase tracking-wider text-primary-green mb-4 block">
-                  {member.role}
-                </span>
-                <button className="btn-outline dark:border-white/20 dark:text-gray-300 flex mx-auto items-center gap-2 group-hover:bg-primary-green group-hover:border-primary-green group-hover:text-white transition-all">
+              <div className="pt-6 px-4 flex-grow flex flex-col justify-between">
+                <div>
+                  <h4 className="text-2xl font-serif font-bold text-text-dark dark:text-white mb-1 group-hover:text-primary-green transition-colors">{member.name}</h4>
+                  <span className="text-sm font-semibold uppercase tracking-wider text-primary-green mb-4 block">
+                    {member.role}
+                  </span>
+                </div>
+                <button
+                  className="btn-outline dark:border-white/20 dark:text-gray-300 flex mx-auto items-center gap-2 group-hover:bg-primary-green group-hover:border-primary-green group-hover:text-white transition-all mt-4"
+                  onClick={() => member.linkedinUrl ? window.open(member.linkedinUrl, "_blank", "noopener,noreferrer") : null}
+                >
                   Connect <ExternalLink size={14} />
                 </button>
               </div>
             </motion.div>
           ))}
+
+          <motion.div variants={itemState} className="bg-white dark:bg-dark-section dark:border dark:border-white/10 rounded-xl p-8 shadow-card dark:shadow-none flex flex-col justify-center h-full md:col-span-1 lg:col-span-2">
+            <h3 className="text-3xl font-serif font-bold text-text-dark dark:text-white mb-6">
+              {descriptionCard.title}
+            </h3>
+            <div className="space-y-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+              <p>{descriptionCard.description}</p>
+              <p>Under her guidance, the company has expanded its reach and product offerings, always maintaining a commitment to excellence and environmental responsibility. Her vision is to create a more sustainable and prosperous future for agriculture in India.</p>
+            </div>
+            <div className="mt-8 flex gap-4">
+              <button onClick={() => navigate('/founder-ceo')} className="btn-primary">Read Full Story</button>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

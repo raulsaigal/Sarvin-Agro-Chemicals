@@ -95,7 +95,7 @@
 }
 
 /* For dark mode support */
-:global(.dark) .text {
+.dark .text {
 	background: #1e1e1e;
 	color: #fff;
 }

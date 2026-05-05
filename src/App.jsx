@@ -6,13 +6,17 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Gallery from './pages/Gallery';
+import Team from './pages/Team';
+// import CeoProfile from './pages/CeoProfile.jsx';
+import CeoProfile from './pages/CeoProfile';
 import Preloader from './components/home/Preloader';
 import { useState } from 'react';
 
 function App() {
   const [loading, setLoading] = useState(true);
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Preloader onComplete={() => setLoading(false)} />
 
       <div className={`${loading ? 'opacity-0 h-screen overflow-hidden' : 'opacity-100 transition-opacity duration-1000'} flex-grow flex flex-col`}>
@@ -24,6 +28,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/founder-ceo" element={<CeoProfile />} />
           </Routes>
         </main>
         <Footer />

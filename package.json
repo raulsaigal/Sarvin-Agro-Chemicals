@@ -13,6 +13,7 @@
     "framer-motion": "^12.38.0",
     "gsap": "^3.14.2",
     "gsap-trial": "^3.12.7",
+    "jimp": "^0.16.13",
     "lucide-react": "^1.7.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

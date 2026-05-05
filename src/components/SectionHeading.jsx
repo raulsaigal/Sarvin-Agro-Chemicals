@@ -8,7 +8,7 @@ export default function SectionHeading({ eyebrow, title, highlightWord, classNam
     const parts = title.split(new RegExp(`(${highlightWord})`, 'gi'));
     return parts.map((part, i) =>
       part.toLowerCase() === highlightWord.toLowerCase() ?
-        <span key={i} className="text-primary-green">{part}</span> : part
+        <span key={i} className="text-primary-green font-[Outfit] text-5xl md:text-6xl tracking-wide">{part}</span> : part
     );
   };
 
